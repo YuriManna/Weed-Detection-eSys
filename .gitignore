@@ -1,1 +1,6 @@
-DATASET/
+*.png
+*.jpg
+datasets/
+.vscode/
+TODO.md
+Notes.md
