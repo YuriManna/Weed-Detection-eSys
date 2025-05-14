@@ -1,11 +1,11 @@
 task: detect
 mode: train
-model: models\trained_yolov11n.pt
+model: models\v4_augmented.pt
 data: datasets/yolo_CropOrWeed2/data.yaml
 epochs: 10
 time: null
 patience: 100
-batch: -1
+batch: 150
 imgsz: 224
 save: true
 save_period: -1

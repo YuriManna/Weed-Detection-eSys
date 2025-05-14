@@ -3,7 +3,7 @@ from ultralytics import YOLO
 
 def main():
     # Load a model
-    model = YOLO("models\yolo11n.pt")
+    model = YOLO("yolo11n.pt")
     
     # Check if CUDA is available
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -15,13 +15,15 @@ def main():
         batch = -1,
         epochs=300, 
         imgsz=224,
-        lr0=0.01,
-        lrf=0.2,
+        lr0=0.001,
+        lrf=0.1,
+        patience=50,
+        momentum=0.937,
+        optimizer="SGD",
+        weight_decay= 0.0005,
         device=device,
-        pretrained=True,
-        patience=20,
-        momentum=0.9,
-        optimizer="Adam")
+        augment=True,
+        verbose=True)
     
     # Save the trained model
     model_path = "models\\trained_yolov11n.pt"

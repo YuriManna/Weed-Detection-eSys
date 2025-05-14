@@ -2,6 +2,9 @@
 data: datasets/yolo_CropOrWeed2/data.yaml
 epochs: 10
 imgsz: 224
-batch: -1
+batch: 150
 lr0: 0.001
 lrf: 0.1
+amp: True
+optimizer: "Adam"
+augment: True

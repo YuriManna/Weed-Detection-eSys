@@ -1,6 +1,7 @@
+.vscode/
 *.png
 *.jpg
 datasets/
-.vscode/
-TODO.md
-Notes.md
+notes.md
+models/
+yolo/runs/
